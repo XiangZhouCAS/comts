@@ -1,5 +1,5 @@
 # comts
-To calculate community abundance in metagenome.
+To calculate community abundance in metagenome.  
 #Before INSTALLATION  
 #fastp seqkit diamond are required!!!  
 #INSTALLATION  
