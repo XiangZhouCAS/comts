@@ -23,6 +23,8 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 
 comts geneset
 - `comts geneset ribo` To calculate RPKM abandance of 14 universal single copy ribosomal genes.
+###example
+     comts geneset ribo -i sample1.1.fastq.gz -o sample1 -t 4 -s Ribo.dmnd
 - `comts geneset res` To convert RPKM to community abandance of single copy function gene through GeneSet.
 
 comts custom
