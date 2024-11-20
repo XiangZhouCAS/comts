@@ -24,11 +24,14 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 ### comts geneset
 - `comts geneset ribo` To calculate RPKM abandance of 14 universal single copy ribosomal genes.  
 #### simple example
-    comts geneset ribo -i sample1.1.fastq.gz -o sample1 -t 4 -s Ribo.dmnd
+    comts geneset ribo -i sample1.1.fastq.gz -o sample1 -t 4 -s Ribo_14.dmnd
 - `comts geneset res` To convert RPKM to community abandance of single copy function gene through GeneSet.  
 #### simple example
     comts geneset res -i geneset.rpkm.txt -r Ribo.rpkm.txt -o community.abd.txt
 ### comts custom
 - `comts custom diy` To calculate single copy function enzyme gene community abandance by custom database.
+    comts custom diy -i sample1.1.fastq.gz -o sample1 -t 100 -d function_genes.dmnd -s Ribo_14.dmnd
 - `comts custom ter` To calculate single copy terminal enzyme gene community abandance.
+    comts custom ter -i sample1.1.fastq.gz -o sample1 -t 100 -d terminal_genes.dmnd -s Ribo_14.dmnd
 - `comts custom hyd` To calculate single copy Hydrogenase community abandance.
+    comts custom hyd -i sample1.1.fastq.gz -o sample1 -t 100 -d hyddb.all.dmnd -s Ribo_14.dmnd -c hyd_id-name.script
