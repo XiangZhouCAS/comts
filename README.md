@@ -8,4 +8,4 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 | Function | Description |
 |-------|-------|
 |`comts geneset`|To calculate community abandance of single copy function genes through GeneSet.|
-|`comts custom`|`To calculate community abandance of single copy function genes through custom database`.|
+|`comts custom`|To calculate community abandance of single copy function genes through custom database.|
