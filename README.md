@@ -10,8 +10,8 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 > diamond  
 > seqkit  
 > fastp
-The background color is `#D23512` for light mode and `#000000` for dark mode.
 
+@octocat :+1: This PR looks great - it's ready to merge! :shipit:
 
 ## Usage
 | Function | Description |
