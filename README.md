@@ -6,12 +6,15 @@ Gene relative abundance algorithms such as RPKM (Reads Per Kilobase per Million 
 community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of universal single copy  Genes)
 
 ## Download and Installation
-### The software listed below must have been installed before downloading :+1:
+### The software listed below must have been installed before downloading :robot:
 > diamond  
 > seqkit  
 > fastp
-
-
+### Download throught `git clone` :
+`git clone https://github.com/XiangZhouCAS/comts.git`
+### Installation
+1. `sh ./install.sh`
+2. `source ~/.bashrc`
 ## Usage
 | Function | Description |
 |-------|-------|
