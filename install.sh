@@ -1,3 +1,4 @@
+chmod +x comts
 comts_path=$(dirname "$(readlink -f "$0")")
 echo 'export PATH="$PATH:'"$comts_path"'"' >> ~/.bashrc
 bins_dir=$comts_path/$(echo bins)
