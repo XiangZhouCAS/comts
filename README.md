@@ -5,7 +5,7 @@ Gene relative abundance algorithms such as RPKM (Reads Per Kilobase per Million 
 ## The formula
 community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of universal single copy  Genes)
 ## Usage
-| 表头1 | 表头2 | 表头3 |
-|-------|-------|-------|
-| 单元格1 | 单元格2 | 单元格3 |
-| 单元格4 | 单元格5 | 单元格6 |
+| Function | Description |
+|-------|-------|
+|`comts geneset`|To calculate community abandance of single copy function genes through GeneSet.|
+|`comts custom`|`To calculate community abandance of single copy function genes through custom database`.|
