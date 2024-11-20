@@ -11,9 +11,6 @@ case "$script_type" in
     geneset)
         "$R_SCRIPTS_DIR/com" "$@"
         ;;
-    stat)
-        Rscript "$R_SCRIPTS_DIR/stat.r" "$@"
-        ;;
     *)
         Rscript "$R_SCRIPTS_DIR/comts.help.r" "$@"
         exit 1
