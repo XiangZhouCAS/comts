@@ -16,7 +16,7 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 1. `sh ./install.sh`
 2. `source ~/.bashrc`
 ### DataBase
-Ribo_14.dmnd
+Ribo_14.dmnd  
 [Hydrogen metabolism terminal enzyme's database providede by greeninglab](https://github.com/GreeningLab/GreeningLab-database/blob/main/Original%20database%20(2020))
 ## Usage
 | Function | Description |
