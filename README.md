@@ -15,8 +15,8 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 ### Installation
 1. `sh ./install.sh`
 2. `source ~/.bashrc`
-### USCGs's DataBase
-[USCGs's DataBase providede by singleM]  
+### DataBase
+USCGs's DataBase providede by singleM
 [Hydrogen metabolism terminal enzyme's database providede by greeninglab](https://github.com/GreeningLab/GreeningLab-database/blob/main/Original%20database%20(2020))
 ## Usage
 | Function | Description |
@@ -46,3 +46,4 @@ comts custom ter -i sample1.1.fastq.gz -o sample1 -t 4 -d terminal_genes.dmnd -s
 ```
 comts custom hyd -i sample1.1.fastq.gz -o sample1 -t 4 -d hyddb.all.dmnd -s Ribo_14.dmnd -c hyd_id-name.script
 ```
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
