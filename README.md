@@ -6,7 +6,7 @@ Gene relative abundance algorithms such as RPKM (Reads Per Kilobase per Million 
 community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of universal single copy  Genes)
 
 ## Download and Installation
-### The software listed below must have been installed before downloading :robot:
+### The software listed below must have been installed before installation :robot:
 > diamond  
 > seqkit  
 > fastp
@@ -15,6 +15,9 @@ community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of unive
 ### Installation
 1. `sh ./install.sh`
 2. `source ~/.bashrc`
+### USCGs's DataBase
+[USCGs's DataBase providede by singleM]
+[Hydrogen metabolism terminal enzyme's database providede by greeninglab](https://github.com/GreeningLab/GreeningLab-database/blob/main/Original%20database%20(2020)/Greeninglab_database2020.zip)
 ## Usage
 | Function | Description |
 |-------|-------|
