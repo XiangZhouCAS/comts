@@ -1,9 +1,9 @@
 # comts
 ## Comts: A simple pipeline for calculating single-copy genes’ community abundance in metagenome
 ## Introduction
-Gene relative abundance algorithms such as RPKM (Reads Per Kilobase per Million mapped reads), FPKM (Fragments Per Kilobase of transcript per Million fragments mapped), and TPM (Transcripts Per Million) have been widely used in various scenarios, but in metagenome analysis, microbial communities are the object of analysis, the abundance of genes needs to correspond to the community to be more valuable for research, but the above algorithms cannot intuitively reflect to the percentage of community members of function genes in microbial community, i.e, community abundance. For this reason, we developed comts, a simple pipeline to calculate the community abundance of single-copy genes in metagenome.
+Gene abundance in metagenome datasets is commonly represented by normalized values such as Reads Per Kilobase per Million Reads (RPKM), Fragments Per Kilobase per Million (FPKM), and Transcripts Per Million (TPM). However, the abundance of functional gene within the level of microbial community (AFG), representing proportion of the community that carries a specific metabolic function, remains underexplored and lacks a standardized methodology for estimation. In this study, we introduce Comts, a comprehensive framework for estimating AFG, and present a robust, user-friendly and efficient computational pipeline designed to calculate AFG from metagenomic sequencing data. The developed pipeline makes it accessible to researchers seeking to evaluate the metabolic capabilities of microbial communities, particularly with respect to single-copy functional genes.
 ## The formula
-community abundance =  (Function Genes' RPKM×100%)/GeoMean( Total RPKM of universal single copy  Genes)
+community abundance =  (Functional Genes' RPKM×100%)/GeoMean( Total RPKM of universal single copy  Genes)
 
 ## Download and Installation
 ### The software listed below must have been installed before installation :robot:
