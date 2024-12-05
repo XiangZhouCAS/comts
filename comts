@@ -1,4 +1,3 @@
-R_SCRIPTS_DIR=/data/wanglab/zhoux/R/communitytools/bins/workflow/bins
 script_type="$1"
 shift
 if [ $# -eq 0 ]; then
