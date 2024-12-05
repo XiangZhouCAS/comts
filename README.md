@@ -3,7 +3,7 @@
 ## Introduction
 Gene abundance in metagenome datasets is commonly represented by normalized values such as Reads Per Kilobase per Million Reads (RPKM), Fragments Per Kilobase per Million (FPKM), and Transcripts Per Million (TPM). However, the abundance of functional gene within the level of microbial community (AFG), representing proportion of the community that carries a specific metabolic function, remains underexplored and lacks a standardized methodology for estimation. In this study, we introduce Comts, a comprehensive framework for estimating AFG, and present a robust, user-friendly and efficient computational pipeline designed to calculate AFG from metagenomic sequencing data. The developed pipeline makes it accessible to researchers seeking to evaluate the metabolic capabilities of microbial communities, particularly with respect to single-copy functional genes.Gene abundance in metagenome datasets is commonly represented by normalized values such as Reads Per Kilobase per Million Reads (RPKM), Fragments Per Kilobase per Million (FPKM), and Transcripts Per Million (TPM). However, the abundance of functional gene within the level of microbial community (AFG), representing proportion of the community that carries a specific metabolic function, remains underexplored and lacks a standardized methodology for estimation. In this study, we introduce Comts, a comprehensive framework for estimating AFG, and present a robust, user-friendly and efficient computational pipeline designed to calculate AFG from metagenomic sequencing data. The developed pipeline makes it accessible to researchers seeking to evaluate the metabolic capabilities of microbial communities, particularly with respect to single-copy functional genes.
 ## The formula
-community abundance =  (Functional Genes' RPKM×100%)/GeoMean( Total RPKM of universal single copy  Genes)
+AFG =  (RFG×100%)/ARUSCG
 
 ## Download and Installation
 ### The software listed below must have been installed before installation :robot:
@@ -17,8 +17,8 @@ community abundance =  (Functional Genes' RPKM×100%)/GeoMean( Total RPKM of uni
 2. `source ~/.bashrc`
 ### DataBase
 Ribo_14.dmnd  
-hyddb_all.dmnd(Søndergaard, D., Pedersen, C. & Greening, C. HydDB: A web tool for hydrogenase classification and analysis. Sci Rep 6, 34212 (2016). https://doi.org/10.1038/srep34212)  
-[Hydrogen metabolism terminal enzyme's database providede by GreeningLab](https://github.com/GreeningLab/GreeningLab-database/blob/main/Original%20database%20(2020))
+hyddb_all.dmnd (Søndergaard, D., Pedersen, C. & Greening, C. HydDB: A web tool for hydrogenase classification and analysis. Sci Rep 6, 34212 (2016). https://doi.org/10.1038/srep34212)  
+ter_hydB-aprA.dmnd ([Hydrogen metabolism terminal enzyme's database providede by GreeningLab](https://github.com/GreeningLab/GreeningLab-database/blob/main/Original%20database%20(2020)))
 ## Usage
 | Function | Description |
 |-------|-------|
