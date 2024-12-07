@@ -6,10 +6,18 @@ Gene abundance in metagenome datasets is commonly represented by normalized valu
 AFG =  (RFG×100%)/MRUSCG
 
 ## Download and Installation
-### The software listed below must have been installed before installation :robot:
+### The softwares listed below must have been installed before installation :robot:
 > diamond  
 > seqkit  
 > fastp
+### The R packages listed below must have been installed before installation  
+> optparse
+> dplyr
+> tidyr
+> data.table
+> magrittr
+> ggplot2
+> tidyverse
 ### Download throught `git clone` :
 `git clone https://github.com/XiangZhouCAS/comts.git`
 ### Installation
