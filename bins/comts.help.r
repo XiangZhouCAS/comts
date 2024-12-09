@@ -1,4 +1,3 @@
-options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))
 if(!require(optparse,quietly = TRUE)){
   install.packages("optparse")
   library(optparse)
