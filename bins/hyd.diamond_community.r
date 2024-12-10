@@ -21,7 +21,7 @@ option_list <- list(
   make_option(c("--run_seqkit","-k"),type = "character",default = "run",
 	      help = "If you have already counted the number of all reads with seqkit, you can set the directory of seqkit result to skip run seqkit, default is run seqkit"),
   make_option(c("--keep_samples","-e"),type = "character",default = "keep",
-              help = "If you do not set 'keep', you can to delete these tmp results, default is keep."))
+              help = "If you do not set 'keep', you can delete these tmp results, default is keep."))
 opt_parser = OptionParser(
   usage = "usage: comts custom hyd [options]",
   option_list = option_list,
