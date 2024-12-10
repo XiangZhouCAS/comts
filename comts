@@ -1,3 +1,4 @@
+R_SCRIPTS_DIR=
 script_type="$1"
 shift
 if [ $# -eq 0 ]; then
