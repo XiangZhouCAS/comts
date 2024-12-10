@@ -1,23 +1,23 @@
-Step1: Remove host’s sequence.
-bowtie2 -p #threads -x hostgenome -1 sample_name.raw.1.fq.gz -2 sample_name.raw.2.fq.gz -S sample_name.sam --un-conc sample_name.raw.clean.fq
+#Step1: Remove host’s sequence.
+bowtie2 -p threads -x hostgenome -1 sample_name.raw.1.fq.gz -2 sample_name.raw.2.fq.gz -S sample_name.sam --un-conc sample_name.raw.clean.fq
 
-Step2: Assemble contigs from sequences. (rename_fasta.sh at the end of the document)
-megahit -1 sample_name.clean.1.fq.gz -2 sample_name.clean.2.fq.gz --min-contig-len #length -t #threads -o sample_name
+#Step2: Assemble contigs from sequences. (rename_fasta.sh at the end of the document)
+megahit -1 sample_name.clean.1.fq.gz -2 sample_name.clean.2.fq.gz --min-contig-len length -t threads -o sample_name
 sh rename_fasta.sh final.contigs.fa sample_name sample_name.contig.ok.fa
 
 
-Step3: Predicting genes from contigs.
+#Step3: Predicting genes from contigs.
 prodigal -i sample_name.contig.ok.fa -f gff -o sample_name.gff -p meta -q -d sample_name.temp.orf.ffn -a sample_name.temp.orf.faa
 perl gene-filter.pl sample_name.temp.orf.ffn  sample_name.temp.orf.faa sample_name.orf.ffn sample_name.orf.faa
 
-Step4: Generate non-redundant representative sequences.
+#Step4: Generate non-redundant representative sequences.
 cd-hit-est -i sample_name.orf.ffn -o sample_name.geneSet.ffn -n 9 -c 0.95 -G 0 -M 0 -d 0 -aS 0.9 -r 0 -T 40
 Cat *geneSet.ffn >> DNA.geneSet.tmp.ffn
 cd-hit-est -i DNA.geneSet.tmp.ffn -o DNA.geneSet.ffn -n 9 -c 0.95 -G 0 -M 0 -d 0 -aS 0.9 -r 0 -T 40
 
-Step5: Clean sequences aligning with gene set.
+#Step5: Clean sequences aligning with gene set.
 bwa index DNA.geneSet.ffn
-bwa mem -t #threads -M -R '@RG\tID:$i\tSM:$i\tLB:$i\tPL:Illumina\tPI:$i' DNA.geneSet.ffn sample_name.clean.1.fq.gz sample_name.clean.1.fq.gz > sample_name.sam
+bwa mem -t #threads -M -R '@RG\tID:$i\tSM:$i\tLB:$i\tPL:Illumina\tPI:$i' DNA.geneSet.ffn sample_name.clean.1.fq.gz sample_name.clean.2.fq.gz > sample_name.sam
 
 Step6: Calculate genes’ RPKM in gene set. (rpkm.r at the end of the document)
 # Counting total read counts (TRC) and length of genes.
