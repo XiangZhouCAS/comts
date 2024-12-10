@@ -7,3 +7,4 @@ bins_dir=$comts_path/$(echo bins)
 sed -i "1s|.*|R_SCRIPTS_DIR=$bins_dir|" $comts_path/comts
 sed -i "1s|.*|R_SCRIPTS_DIR=$bins_dir|" $comts_path/bins/com
 sed -i "1s|.*|R_SCRIPTS_DIR=$bins_dir|" $comts_path/bins/custom
+gunzip ter.dmnd.gz
