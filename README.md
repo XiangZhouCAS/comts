@@ -17,7 +17,6 @@ AFG =  (RFG×100%)/MRUSCG
 > data.table
 > magrittr
 > ggplot2
-> tidyverse
 ### Download throught `git clone` :
 `git clone https://github.com/XiangZhouCAS/comts.git`
 ### Installation
