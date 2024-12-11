@@ -1,4 +1,4 @@
-if (!require(optparse,quietly = TRUE)) {
+if (!require(optparse)) {
   install.packages("optparse")
   library(optparse)
 } else {
