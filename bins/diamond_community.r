@@ -129,7 +129,6 @@ d1$all_reads_nums <- as.numeric(d1$all_reads_nums)
 d1$tmp_RPKM <- d1$n*10^9/(d1$slen*d1$all_reads_nums*3)
 d1$sample_name <- basename(outpath)
 d1$gene <- gsub(" .*","",d1$gene)
-f <- read.table(filter_condition,header = T,sep = "\t")
 if(filter_condition != "default"){
   f <- read.table(filter_condition,header = T,sep = "\t")
   rownames(f)[c(1:3)] <- c("gene","identity","coverage")
