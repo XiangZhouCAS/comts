@@ -19,7 +19,7 @@ option_list <- list(
   make_option(c("--run_seqkit","-k"),type = "character",default = "run",
 	      help = "If you have already counted the number of all reads with seqkit, you can set the directory of seqkit result (e.g.'sample_name.all.reads.txt') to skip running seqkit; by default, seqkit is run."),
   make_option(c("--filter_condition","-l"),type = "character",default = "default",
-	      help = "Please set the filter_condition file"),
+	      help = "Please set the filter_condition file, identity = 50 and coverage = 80 are default conditions."),
   make_option(c("--keep_samples","-e"),type = "character",default = "keep",
               help = "If you do not set 'keep', you can to delete these tmp results, default is keeping."))
 opt_parser = OptionParser(
