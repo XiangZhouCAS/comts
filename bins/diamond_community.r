@@ -60,19 +60,19 @@ diamond_singleM2 <- sprintf("diamond blastx --db %s --query %s --out %s --thread
 			    singleM, input_reads, singleM_out, threads)
 seqkit2 <- sprintf("seqkit stat %s > %s > /dev/null 2>&1",
 		   run_fastp,seqkit_out)
-if(run_fastp != "run"){
+if(run_fastp == "run"){
 	print("fastp is Running.")
 	system(fastp)
         print("fastp is completed.")}else{
 		print("Not run the fastp because you set the directory of filtered reads to skip it.")}
-if(run_fastp != "run"){
+if(run_fastp == "run"){
 	print("diamond is Running (function genes).")
 	system(diamond)
         print("diamond is completed (function genes).")}else{
 		print("diamond is Running (function genes).")
 		system(diamond2)
                 print("diamond is completed (function genes).")}
-if(run_fastp != "run"){
+if(run_fastp == "run"){
   if(tmp$V1 != "text"){
     print("diamond is Running (USCGs).")
     system(diamond_singleM)
@@ -83,7 +83,7 @@ if(run_fastp != "run"){
   system(diamond_singleM2)
   print("diamond is completed (functional genes).")
     }else{print("Not count the RPKM of singleM marker genes.")}}
-if(run_fastp != "run"){
+if(run_fastp == "run"){
   if(run_seqkit == "run"){
     print("seqkit is Running.")
     system(seqkit)
