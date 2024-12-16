@@ -52,7 +52,7 @@ diamond <- sprintf("diamond blastx --db %s --query %s --out %s --threads %d --ou
                    diamond_db, fastp_output, diamond_out, threads)
 diamond_singleM <- sprintf("diamond blastx --db %s --query %s --out %s --threads %d --outfmt 6 slen stitle qcovhsp bitscore --max-target-seqs 1 --max-hsps 1 > /dev/null 2>&1",
                            singleM, fastp_output, singleM_out, threads)
-seqkit <- sprintf("seqkit stat %s > %s > /dev/null 2>&1",
+seqkit <- sprintf("seqkit stat %s > %s",
                   fastp_output,seqkit_out)
 diamond2 <- sprintf("diamond blastx --db %s --query %s --out %s --threads %d --outfmt 6 slen stitle pident qcovhsp --max-target-seqs 1 --max-hsps 1 > /dev/null 2>&1",
 		   diamond_db, input_reads, diamond_out, threads)
