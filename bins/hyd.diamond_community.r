@@ -215,10 +215,10 @@ com <- pivot_wider(tmp,id_cols = gene,
               values_from = "AFG",
               names_from = "sample_name")
 com[is.na(com)] <- 0
-write.table(com,"community.abd.txt",
+com <- com[!duplicated(com[,c(1,2)]),]
+write.table(com,"AFG.abd.txt",
                     sep = "\t",
                     quote = F,row.names = F)
-com <- com[!duplicated(com[,c(1,2)]),]
 if(!require(ggplot2)){
   install.packages("ggplot2")
   library(ggplt2)
