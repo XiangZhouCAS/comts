@@ -58,6 +58,8 @@ diamond2 <- sprintf("diamond blastx --db %s --query %s --out %s --threads %d --o
 		   diamond_db, input_reads, diamond_out, threads)
 diamond_singleM2 <- sprintf("diamond blastx --db %s --query %s --out %s --threads %d --outfmt 6 slen stitle qcovhsp bitscore --max-target-seqs 1 --max-hsps 1 > /dev/null 2>&1",
 			    singleM, input_reads, singleM_out, threads)
+seqkit2 <- sprintf("seqkit stat %s > %s",
+		   input_reads,seqkit_out)
 if(run_fastp == "run"){
 	print("fastp is Running.")
 	system(fastp)
@@ -81,11 +83,15 @@ if(run_fastp == "run"){
   system(diamond_singleM2)
   print("diamond is completed (functional genes).")
     }else{print("Not count the RPKM of singleM marker genes.")}}
-if(run_seqkit == "run"){
+if(run_fastp == "run"){
+  if(run_seqkit == "run"){
     print("seqkit is Running.")
     system(seqkit)
-    print("seqkit is completed.")}else{
+    print("seqkit is Running.")}else{
       print("Not run the seqkit because you set the directory of seqkit result")}
+  }else{if(run_seqkit == "run"){
+  print("seqkit is Running.")
+  system(seqkit2)
 if (!require(magrittr)) {
   install.packages("magrittr")
   library(magrittr)
