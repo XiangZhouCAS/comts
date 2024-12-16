@@ -218,7 +218,7 @@ com <- pivot_wider(tmp,id_cols = gene,
               names_from = "sample_name")
 com[is.na(com)] <- 0
 com <- com[!duplicated(com[,c(1,2)]),]
-write.table(com,"community.abd.txt",
+write.table(com,"AFG.abd.txt",
                     sep = "\t",
                     quote = F,row.names = F)
 if(!require(ggplot2)){
