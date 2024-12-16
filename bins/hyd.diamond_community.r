@@ -139,7 +139,7 @@ d1 <- d1[,c(8,9,7)]
 d1 <- d1%>%
   group_by(gene)%>%
   mutate(RPKM = sum(tmp_RPKM))
-d1 <- d1[!duplicated(d1[,c(1,2)]),]
+d1 <- unique(d1[,-3])
 if(tmp$V1 != "text"){
   d2 <- read.table(singleM_out,sep = "\t")
   }else{
