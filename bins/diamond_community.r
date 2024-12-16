@@ -92,6 +92,7 @@ if(run_fastp == "run"){
   }else{if(run_seqkit == "run"){
   print("seqkit is Running.")
   system(seqkit2)
+  print("Not run the seqkit because you set the directory of seqkit result")}}
 if (!require(magrittr)) {
   install.packages("magrittr")
   library(magrittr)
