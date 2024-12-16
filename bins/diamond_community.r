@@ -83,7 +83,7 @@ if(run_fastp != 0){
   system(diamond_singleM2)
   print("diamond is completed (functional genes).")
     }else{print("Not count the RPKM of singleM marker genes.")}}
-if(run_fastp != 1){
+if(run_fastp != 0){
   if(run_seqkit == "run"){
     print("seqkit is Running.")
     system(seqkit)
