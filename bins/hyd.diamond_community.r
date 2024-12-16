@@ -87,7 +87,7 @@ if(run_fastp == "run"){
   if(run_seqkit == "run"){
     print("seqkit is Running.")
     system(seqkit)
-    print("seqkit is Running.")}else{
+    print("seqkit is completed.")}else{
       print("Not run the seqkit because you set the directory of seqkit result")}
   }else{if(run_seqkit == "run"){
   print("seqkit is Running.")
