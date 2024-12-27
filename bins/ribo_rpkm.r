@@ -5,13 +5,13 @@ if (!require(optparse,quietly = TRUE)) {
   library(optparse)}
 option_list <- list(
   make_option(c("--input_reads","-i"),type = "character",default = F,
-                                help = "please set the directory of reads"),
+                                help = "Please set the directory of reads"),
   make_option(c("--result","-o"),type = "character",default = F,
-              help = "please set the result file name"),
+              help = "Please set the result file name"),
   make_option(c("--threads","-t"),type = "numeric",default = 40,
               help = "Setting the threads of CPU,default is 40"),
   make_option(c("--singleM","-s"),type = "character",default = F,
-              help = "please set the directory of singleM's universal single copy ribosomal genes (USCGs) database"),
+              help = "Please set the directory of singleM's universal single copy ribosomal genes (USCGs) database"),
   make_option(c("--run_fastp","-f"),type = "character",default = "run",
               help = "If you have already filtered the reads (length >= 140), you can set `skip` to skip run fastp, default is run fastp"),
   make_option(c("--run_seqkit","-k"),type = "character",default = "run",
