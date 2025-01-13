@@ -5,23 +5,23 @@ if (!require(optparse,quietly = TRUE)) {
   library(optparse)}
 option_list <- list(
   make_option(c("--input_reads","-i"),type = "character",default = F,
-              help = "Please set the reads,only the forward reads if the data is PE"),
+              help = "Please set the reads to include only the forward reads if the data is paired-end (PE)."),
   make_option(c("--result","-o"),type = "character",default = F,
-              help = "Please set the result file name"),
+              help = "Please set the name for the result file."),
   make_option(c("--threads","-t"),type = "numeric",default = 1,
-              help = "Setting the threads of CPU,default is 1"),
+              help = "Set the number of CPU threads, with the default value being 1."),
   make_option(c("--diamond_db","-d"),type = "character",default = F,
-              help = "Please set the directory of function genes diamond database"),
+              help = "Please specify the directory for the functional genes DIAMOND database."),
   make_option(c("--singleM","-s"),type = "character",default = F,
-              help = "Please set the directory of singleM's universal single copy ribosomal genes database (e.g.'Ribo_14.dmnd'), but if you have already counted the RPKM of these genes, you can set the directory of result (e.g.'sample_name.singleM.hits.txt') to skip it"),
+              help = "Please specify the directory for SingleM's universal single-copy ribosomal genes database (e.g., 'Ribo_14.dmnd'). If you have already calculated the RPKM for these genes, you may instead specify the directory for the results (e.g., 'sample_name.singleM.hits.txt') to skip this step."),
   make_option(c("--run_fastp","-f"),type = "character",default = "run",
-              help = "If you have already filtered the reads (length > 140), you can set 0 to skip run fastp, default is run fastp"),
+              help = "If you have already filtered the reads (length > 140), you can set the value to 0 to skip running fastp. The default is to run fastp."),
   make_option(c("--run_seqkit","-k"),type = "character",default = "run",
-	      help = "If you have already counted the number of all reads with seqkit, you can set the directory of seqkit result (e.g.'sample_name.all.reads.txt') to skip running seqkit; by default, seqkit is run."),
+	      help = "If you have already counted the total number of reads using seqkit, you can specify the directory of the seqkit results (e.g., 'sample_name.all.reads.txt') to skip running seqkit. By default, seqkit will be executed."),
   make_option(c("--filter_condition","-l"),type = "character",default = "default",
-	      help = "Please set the filter_condition file, identity = 50 and coverage = 80 are default conditions."),
+	      help = "Please specify the filter_condition file. By default, the identity is set to 50 and the coverage to 80."),
   make_option(c("--keep_samples","-e"),type = "character",default = "keep",
-              help = "If you do not set 'keep', you can to delete these tmp results, default is keeping."))
+              help = "By default, the temporary results will be deleted unless the 'keep' option is specified."))
 opt_parser = OptionParser(
   usage = "usage: comts custom diy [options]",
   option_list = option_list,
